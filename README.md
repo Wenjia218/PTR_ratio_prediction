@@ -3,6 +3,7 @@
 The goal of this project is to evaluate the usage of language models to predict PTR ratios across tissues.
 
 Milestones could be:
+
 ●	Understand and collect the different sequence features used by our model.
 
 ●	Run the model with 10-fold cross validation using the original features. Verify that you get the same results as in the paper.

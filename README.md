@@ -25,4 +25,3 @@ Milestones could be:
 ●	Systematically compare and comment on what you find. Are there stark, statistically significant differences?
 
 ●	(Optional) Perform in silico saturation mutagenesis to interpret your results.
-

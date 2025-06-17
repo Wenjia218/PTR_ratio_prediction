@@ -1,5 +1,11 @@
 # PTR_ratio_prediction
 
+install all notebook packages:
+
+```python
+pip install -r requirements.txt
+```
+
 The goal of this project is to evaluate the usage of language models to predict PTR ratios across tissues.
 
 Milestones could be:

@@ -15,7 +15,7 @@ seqs = pd.read_csv('data/Table_EV4.tsv', sep='\t')
 seqs = seqs[['EnsemblGeneID','ProteinSequence']]
 
 tokenizer = AutoTokenizer.from_pretrained("../esm2_t12_35M_UR50D")
-input = tokenizer(list(seqs['ProteinSequence']),return_tensors="pt",padding=True, truncation=True,max_length=5000)
+input=tokenizer(list(seqs['ProteinSequence']),return_tensors="pt",padding=True,truncation=True,max_length=5000)
 
 model = AutoModelForSequenceClassification.from_pretrained("../esm2_t12_35M_UR50D",num_labels=100)
 
@@ -43,4 +43,4 @@ def run_esm2(input, batch_size):
    
 logits_df = run_esm2(input,4)
 
-logits_df.to_csv("data/esm2_t12_35M_UR50D_100_embed.csv", index=False)
+logits_df.to_tsv("data/esm2_t12_35M_UR50D_100_embed.tsv", index=False)

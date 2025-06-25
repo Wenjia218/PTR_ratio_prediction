@@ -79,7 +79,7 @@ def mixed_model(features, ptr_long):
     
     ptr_long['predicted_PTR'] = predicted_ptr
 
-    return coefs_list, intercepts_list, ptr_long
+    return coefs_list, ptr_long
 
 
 if __name__ == "__main__":
@@ -99,8 +99,8 @@ if __name__ == "__main__":
     coefs_list, ptr_pred = mixed_model(features, ptr_long)
 
     # Save outputs with descriptive filenames
-    np.save(f'data/coefs_{feature_filename}_{ptr_filename}.npy', coefs_list)
-    ptr_pred.to_csv(f'data/ptr_pred_{feature_filename}_{ptr_filename}.tsv', sep='\t', index=False)
+    np.save(f'data/coefs_{feature_filename}.npy', coefs_list)
+    ptr_pred.to_csv(f'data/ptr_pred_{feature_filename}.tsv', sep='\t', index=False)
 
 
 

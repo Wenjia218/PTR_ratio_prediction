@@ -79,7 +79,7 @@ def mixed_model(features, ptr_long):
     
     ptr_long['predicted_PTR'] = predicted_ptr
 
-    return coefs_list, intercepts_list, ptr_long
+    return coefs_list, ptr_long
 
 
 if __name__ == "__main__":

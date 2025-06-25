@@ -43,4 +43,4 @@ def run_esm2(input, batch_size):
    
 logits_df = run_esm2(input,4)
 
-logits_df.to_tsv("data/esm2_t12_35M_UR50D_100_embed.tsv", index=False)
+logits_df.to_csv("data/esm2_t12_35M_UR50D_100_embed.tsv", sep='\t', index=False)

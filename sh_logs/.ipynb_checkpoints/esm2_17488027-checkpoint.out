@@ -1,0 +1,5 @@
+Traceback (most recent call last):
+  File "/data/ceph/hdd/project/node_07/ml4rg_students/2025/project01/group04/PTR_ratio_prediction/ESM-2.py", line 33, in <module>
+    parser = argparse.ArgumentParser(description="Run ESM-2 model on protein sequences.")
+             ^^^^^^^^
+NameError: name 'argparse' is not defined

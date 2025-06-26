@@ -27,8 +27,7 @@ def data_prep_melt(feature_path,ptr_path):
 
     id_vars = ptr.columns[:4]
     value_vars = ptr.columns[4:] 
-    ptr_long = ptr.melt(id_vars=id_vars, value_vars=value_vars, 
-                var_name='tissue', value_name='PTR')
+    ptr_long = ptr.melt(id_vars=id_vars, value_vars=value_vars, var_name='tissue', value_name='PTR')
     ptr_long['tissue'] = ptr_long['tissue'].str.replace('_PTR', '', regex=False)
     ptr_long['PTR'] = pd.to_numeric(ptr_long['PTR'], errors='coerce')
     ptr_long = ptr_long.dropna(subset=['PTR'])
@@ -76,7 +75,6 @@ def mixed_model(features, ptr_long):
         predicted_ptr[test_idx] = result.predict(merged.iloc[test_idx])
         coefs_list.append(result.params)
 
-    
     ptr_long['predicted_PTR'] = predicted_ptr
 
     return coefs_list, ptr_long

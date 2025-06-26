@@ -7,4 +7,4 @@
 #SBATCH --output=sh_logs/PTR_prediciton_%j.out  # Output file (%j = job ID)
 
 # Run your Python script
-python PTR_prediciton.py data/Table_EV6.tsv data/Table_EV3.tsv
+python PTR_prediciton.py data/esm2_t12_35M_UR50D_200_embed.tsv data/Table_EV3.tsv

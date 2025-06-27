@@ -45,6 +45,7 @@ if __name__ == "__main__":
         seqs = seqs.iloc[:10]
         
     tokenizer = AutoTokenizer.from_pretrained(args.model_path)
+    #with max_length=5000 only 0.14% of seqs get cut
     inputs = tokenizer(list(seqs['ProteinSequence']), return_tensors="pt", padding=True, truncation=True, max_length=5000)
 
     model = AutoModelForSequenceClassification.from_pretrained(args.model_path, num_labels=args.num_labels)

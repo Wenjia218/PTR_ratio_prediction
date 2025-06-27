@@ -8,4 +8,4 @@
 #SBATCH --output=sh_logs/esm2_%j.out  # Output file (%j = job ID)
 
 # Run your Python script
-python ESM-2.py ../esm2_t12_35M_UR50D 200 
+python ESM-2.py ../esm2_t33_650M_UR50D 500 

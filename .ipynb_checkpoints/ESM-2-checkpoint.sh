@@ -4,8 +4,8 @@
 #SBATCH --cpus-per-task=16
 #SBATCH --mem=64G
 #SBATCH --gres=gpu:1
-#SBATCH --time=08:00:00  # Set appropriate time limit
+#SBATCH --time=12:00:00  # Set appropriate time limit
 #SBATCH --output=sh_logs/esm2_%j.out  # Output file (%j = job ID)
 
 # Run your Python script
-python ESM-2.py ../esm2_t33_650M_UR50D 500 
+python ESM-2.py ../esm2_t36_3B_UR50D 500 --batch_size 4

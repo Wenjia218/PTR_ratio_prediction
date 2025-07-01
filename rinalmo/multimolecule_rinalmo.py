@@ -33,8 +33,9 @@ model.eval()
 # 4) Helper to embed a single sequence
 def embed_seq(seq: str) -> np.ndarray:
     # tokenize, move inputs to device
+    # 0.005 sequences got cut using the max length of 10000
     inputs = tokenizer(
-        seq, return_tensors="pt", truncation=True, max_length=tokenizer.model_max_length
+        seq, return_tensors="pt", padding=True, truncation=True, max_length=10000
     ).to(device)
     with torch.no_grad():
         out = model(**inputs).last_hidden_state  # [1, L, D]

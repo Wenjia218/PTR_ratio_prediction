@@ -1,4 +1,0 @@
-
-CondaError: Run 'conda init' before 'conda activate'
-
-/var/spool/slurmd//job17471040/slurm_script: line 14: python: command not found
